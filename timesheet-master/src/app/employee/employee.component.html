@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Employee List</h1>
+    <table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Weekly Effort (Total)</th>
+        <th>Weekly Effort (Average)</th>
+    </tr>
+    <tr *ngFor="let item of employees">
+        <td>{{item.id}}</td>
+         <td>{{item.code}}</td>
+         <a (click)='redirectToTimesheet(item.id)' style="cursor: pointer;"  title='show details'><td>{{item.name}}</td></a>
+        <td>{{item.weeklyTotal}}</td>
+        <td>{{item.weeklyAvrage}}</td>
+    </tr>
+</table>
+</div>

@@ -1,0 +1,62 @@
+<div class="container" style="margin-left:30%">
+    <div class="mb-5">
+        <h1> New Record</h1>
+    </div>
+
+
+
+    <div class="row mt-2">
+        <div class="col-lg-1"><b><label class="label-control">Employee</label></b>
+      
+
+            <select [(ngModel)]='sheet.EmployeeId' style="width: 21% !important;    margin-left: 4%;" class="form-control search_categories" disabled (ngModelChange)='onOptionsSelected($event)'>
+    <option *ngFor="let emp of employees" [ngValue]="emp.id"  [selected]="emp.id == sheet.EmployeeId">
+        {{emp.name}}
+    </option>
+</select>
+        </div>
+
+        <div class="col-lg-1"><b><label class="label-control">Task Name</label></b>
+
+
+      
+            <select [(ngModel)]='sheet.TaskId' style="width: 21% !important;    margin-left: 4%;" class="form-control search_categories" (ngModelChange)='onOptionsSelected($event)'>
+    <option *ngFor="let emp of tasks" [ngValue]="emp.id"  [selected]="emp.id == sheet.TaskId">
+        {{emp.name}}
+    </option>
+</select>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="row mt-2">
+        <div class="col-lg-1"><b><label class="label-control">Task Date</label></b>
+        
+
+            <input type="date" style="    margin-left: 4%;" class="form-control" [max]="currDate" [(ngModel)]='sheet.WorkingDate' />
+
+        </div>
+
+        <div class="col-lg-1"><b><label class="label-control">No Of Hours</label></b>
+
+
+        
+            <input type="number" style="    margin-left: 4%;" class="form-control" [(ngModel)]='sheet.WorkingHours' />
+
+        </div>
+
+    </div>
+
+    <div class="row mt-2">
+        <div class="text-center col-lg-9"><input type="button" class="button" (click)='saveSheet()' value="Save" style="padding: 9px;
+                margin-left: 22%;
+    width: 10%;
+            margin-top: 24px;"/>
+        </div>
+    </div>
+
+
+</div>

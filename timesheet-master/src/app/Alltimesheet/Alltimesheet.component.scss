@@ -1,0 +1,64 @@
+h1{
+    color: grey
+}
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    td, th{
+        border: 1px solid #ddd;
+        padding: 7px;
+    }  
+    tr:nth-child(even){background-color: #f2f2f2;}
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #1c6ca5;
+        color: white;
+      }
+      tr:hover {background-color: #ddd;}
+  }
+  .button {
+      
+    background-color: #1c6ca5;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .search_categories .select{
+    width: 120%;
+    background:url(https://img.icons8.com/material/24/000000/sort-down.png) no-repeat;
+    background-position:80% center;
+  }
+
+  .search_categories{
+    font-size: 13px;
+    padding: 10px 8px 10px 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .search_categories .select{
+    width: 120%;
+    background:url(https://img.icons8.com/material/24/000000/sort-down.png) no-repeat;
+    background-position:80% center;
+  }
+  
+  .search_categories .select select{
+    background: transparent;
+    line-height: 1;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    width: 120%;
+    position: relative;
+    z-index: 10;
+    font-size: 1em;
+  }
